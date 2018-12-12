@@ -1,0 +1,30 @@
+<section class="container-fluid text-center panel panel-default formPanel">
+    <div class="row">
+        <div class="container">
+            <form class="form-inline" ng-submit="school(adress)">
+                <div class="form-group">
+                    <span class="input-group-text">Adress</span>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your adress" name="adress"
+                        ng-model="adress">
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <form class="form-inline" ng-submit="school(skoltyp)">
+                <div class="form-group">
+                    <span class="input-group-text">school name</span>
+                    <select class="form-control" id="namn" ng-model="skoltyp">
+                        <option value="">Select school by skoltyp</option>
+                        <option>Förskola</option>
+                        <option>Grundskola</option>
+                        <option>Gymnasieskola</option>
+                        <option>Särskola</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+    </div>
+</section>
