@@ -78,7 +78,7 @@ body{
 .border-color-6 {
   border-color: #a597e7!important;
 }
-.promotionWrapper {
+.wrapper {
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -89,7 +89,7 @@ body{
 .sectionTitle h2>span {
   padding: 0 15px;
 }
-.promotionWrapper .promotionInfo {
+.wrapper .info {
   text-align: center;
 }
 .featureSection {
