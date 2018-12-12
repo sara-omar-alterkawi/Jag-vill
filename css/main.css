@@ -152,7 +152,7 @@ body{
   transform: rotate(360deg);
 }
 .logo{
-   border-width:2px;
+   border-width:3px;
    border-style:solid;
    border-radius:50px;
    border-bottom-color:#A80171;
@@ -220,12 +220,10 @@ body{
    background-color: #ea7066;
    box-shadow:0 4px 0 rgba(0,0,0,.1);
 }
-
 .space {
    display: inline-block;
    margin-right: 16px;
  }
-
 .color-bar .col-sm-1 {
    height: 3px;
    text-indent: -99999px;
@@ -324,7 +322,7 @@ form {
    height: 50px;
    padding-top: 10px;
 }
- .formField i{
+.formField i{
    width: 35px;
    height: 35px;
    line-height: 35px;
@@ -377,8 +375,6 @@ h5{
    -moz-background-size: cover;
    -o-background-size: cover;
    background-size: cover;
-
-
    background-position: center center; opacity: 1; visibility: inherit;
    background-color: rgba(0, 0, 0, 0);
  }
@@ -408,9 +404,7 @@ h5{
    background-color: #003244;
    color: #fff;
    padding: 10px;
-   margin-top: 1px;
-
-   
+   margin-top: 1px; 
    bottom: 0;
    width: 100%;
 }
