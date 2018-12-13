@@ -69,7 +69,7 @@ app.controller('AuthCtrl', ['$scope', '$location', '$firebaseAuth', function ($s
 }]);
 
 /**********************************/
-app.controller('SchoolController', ['$scope', '$location', function ($scope, $location, $window) {
+app.controller('SchoolController', ['$scope', '$location', function ($scope, $location) {
     $scope.school = function (adress) {
         console.log(adress);
         if (adress === undefined) {
@@ -89,7 +89,7 @@ app.controller('SchoolResultsController', ['$scope', '$routeParams', 'getSchools
         });
 }]);
 
-app.controller('LibraryController', ['$scope', '$location', function ($scope, $location, $window) {
+app.controller('LibraryController', ['$scope', '$location', function ($scope, $location) {
     $scope.library = function (adress) {
         console.log(adress);
         if (adress === undefined) {
@@ -109,7 +109,7 @@ app.controller('LibraryResultsController', ['$scope', '$routeParams', 'getLibrar
         });
 }]);
 
-app.controller('ActivityController', ['$scope', '$location', function ($scope, $location, $window) {
+app.controller('ActivityController', ['$scope', '$location', function ($scope, $location) {
     $scope.activity = function (adress) {
         console.log(adress);
         if (adress === undefined) {
@@ -129,7 +129,7 @@ app.controller('ActivityResultsController', ['$scope', '$routeParams', 'getAktiv
         });
 }]);
 
-app.controller('MuseumController', ['$scope', '$location', function ($scope, $location, $window) {
+app.controller('MuseumController', ['$scope', '$location', function ($scope, $location) {
     $scope.museum = function (adress) {
         console.log(adress);
         if (adress === undefined) {
