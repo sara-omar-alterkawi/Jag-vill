@@ -1,0 +1,34 @@
+<!-- ====================================
+    ——— SIGN UP MODAL
+    ===================================== -->
+    <section class="container-fluid text-center panel panel-default formPanel">
+        <div class="row">
+          <div class="col-md-4 offset-md-4 jumbotron">
+            <h3 class="panel-title bg-color-1">Registration Info</h3>
+            <form ng-submit="signUp(user)">
+      
+              <div class="form-group form-inline formField">
+                <label for="email"><i class="fas fa-envelope bg-color-1"></i></label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="user.email">
+              </div>
+      
+              <div class="form-group form-inline formField">
+                <label for="password"><i class="fas fa-key bg-color-1"></i></label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="user.password">
+              </div>
+              <div class="form-group form-inline formField">
+                <label for="Username"><i class="fas fa-user bg-color-1"></i></label>
+                <input type="text" class="form-control" id="pwd" placeholder="Enter username" name="pwd" ng-model="user.username">
+              </div>
+      
+              <div class="form-group form-inline formField">
+                <button type="submit" class="btn btn-primary btn-block bg-color-3"><strong>SIGN UP</strong></button>
+              </div>
+      
+              <div class="form-group formField">
+                    <p class="alert-danger mar"><strong>{{error}}</strong></p>
+                </div>
+            </form>
+          </div>
+        </div>
+      </section>

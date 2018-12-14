@@ -1,0 +1,39 @@
+<section class="container-fluid text-center panel panel-default formPanel">
+    <div class="row">
+        <!-- SEARCH BY Category -->
+        <div class="container">
+            <form class="form-inline" ng-submit="activity(kategori)">
+                <div class="form-group">
+                    <span class="input-group-text">Category</span>
+                    <select class="form-control" id="kategori" ng-model="kategori">
+                        <option value="">Select Category</option>
+                        <option>Fotbollsplaner</option>
+                        <option>Fritidsgårdar</option>
+                        <option>Sporthallar</option>
+                        <option>Idrottsanläggningar</option>
+                        <option>Övrigt</option>
+                        <option>Badanläggningar</option>
+                        <option>Ridanläggningar</option>
+                        <option>Ishallar</option>
+                        <option>Friidrott</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+
+        <!-- SEARCH BY Adress -->
+        <div class="container">
+            <form class="form-inline" ng-submit="activity(adress)">
+                <div class="form-group">
+                    <span class="input-group-text">Address</span>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your address" name="adress"
+                        ng-model="adress">
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+    </div>
+</section>

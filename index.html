@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="RosApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaj Vill</title>
+
+    <link rel="icon" type="image/ico" href="./img/logo.png" />
+    <!-- Main CSS-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-------------------------->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/color-option2.css" id="option_color">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-------------------------->
+
+</head>
+
+<body>
+    <!-- COLOR BAR -->
+    <div class="container-fluid color-bar fixed-top clearfix">
+        <div class="row">
+            <div class="col-sm-1 col-xs-2 bg-color-1">fix bar</div>
+            <div class="col-sm-1 col-xs-2 bg-color-2">fix bar</div>
+            <div class="col-sm-1 col-xs-2 bg-color-3">fix bar</div>
+            <div class="col-sm-1 col-xs-2 bg-color-4">fix bar</div>
+            <div class="col-sm-1 col-xs-2 bg-color-5">fix bar</div>
+            <div class="col-sm-1 col-xs-2 bg-color-6">fix bar</div>
+            <div class="col-sm-1 bg-color-1 hidden-xs">fix bar</div>
+            <div class="col-sm-1 bg-color-2 hidden-xs">fix bar</div>
+            <div class="col-sm-1 bg-color-3 hidden-xs">fix bar</div>
+            <div class="col-sm-1 bg-color-4 hidden-xs">fix bar</div>
+            <div class="col-sm-1 bg-color-5 hidden-xs">fix bar</div>
+            <div class="col-sm-1 bg-color-6 hidden-xs">fix bar</div>
+        </div>
+    </div>
+    <!-------------------------->
+
+    <!-- Navbar -->
+    <div class="mainWrapper">
+        <header id="pageTop" class="header-Wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light text-center" ng-controller="AuthCtrl">
+                <a class="navbar-brand" href="">
+                    <img class="logo" src="./img/logo.png" alt="Jag vill">
+                    <span class="color-1 font-weight-bold">J</span>
+                    <span class="color-2 font-weight-bold">A</span>
+                    <span class="color-3 space font-weight-bold">G</span>
+                    <span class="color-4 font-weight-bold">V</span>
+                    <span class="color-5 font-weight-bold">I</span>
+                    <span class="color-6 font-weight-bold">L</span>
+                    <span class="color-1 font-weight-bold">L</span>
+                </a>
+                <!-------------------------->
+
+                <!--Brand and toggle get grouped for better mobile display -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsive-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-------------------------->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="responsive-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a href="#!" class="nav-link" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-home bg-color-1" aria-hidden="true"></i>
+                                <span class="active color-1">Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="!user">
+                            <a href="#!/sign-up" class="nav-link">
+                                <i class="fa fa-unlock-alt bg-color-2"></i>
+                                <span class="color-2">Sign up</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="!user">
+                            <a href="#!/login" class="nav-link">
+                                <i class="fas fa-sign-in-alt bg-color-3"></i>
+                                <span class="color-3">sign in</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="user">
+                            <a ng-click="signOut()" class="nav-link">
+                                <i class="fas fa-sign-out-alt bg-color-2"></i>
+                                <span class="color-2">Sign Out</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="user">
+                            <a href="#!/school" class="nav-link">
+                                <i class="fas fa-graduation-cap bg-color-3"></i>
+                                <span class="color-3">School</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="user">
+                            <a href="#!/library" class="nav-link">
+                                <i class="fas fa-book-reader bg-color-4"></i>
+                                <span class="color-4">Library</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="user">
+                            <a href="#!/activity" class="nav-link">
+                                <i class="fas fa-child bg-color-5"></i>
+                                <span class="color-5">Activity</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" ng-if="user">
+                            <a href="#!/museum" class="nav-link">
+                                <i class="fas fa-school bg-color-6"></i>
+                                <span class="color-6">Museum</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <div id="google_translate_element"></div>
+
+                        </li>
+                    </ul>
+                </div>
+                <!-------------------------->
+
+            </nav>
+        </header>
+    </div>
+    <!-------------------------->
+
+    <!-- Angular change -->
+    <main ng-view="" class="container-fluid text-center panel panel-default formPanel " style="background-image: url(img/00.png)"></main>
+    <!-------------------------->
+
+    <!--Angular Javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.7.5/angular-route.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-------------------------->
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.6/firebase.js"></script>
+    <!-------------------------->
+
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyABH5ZQvucS_tvcu3FJ394EjX_f6SydFqc",
+            authDomain: "sara-firebase.firebaseapp.com",
+            databaseURL: "https://sara-firebase.firebaseio.com",
+            projectId: "sara-firebase",
+            storageBucket: "sara-firebase.appspot.com",
+            messagingSenderId: "189176650341"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!-------------------------->
+
+    <!-- GOOGLE TRANSLATE -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-------------------------->
+
+    <!-- My javascript files -->
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/services.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/
+  jquery.min.js"></script>
+    <!-------------------------->
+
+    <!-- jquery and bootstrap javascript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-------------------------->
+</body>
+
+</html>

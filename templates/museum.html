@@ -1,0 +1,40 @@
+<section class="container-fluid text-center panel panel-default formPanel">
+    <div class="row">
+        <!-- SEARCH BY name -->
+        <div class="container">
+            <form class="form-inline" ng-submit="museum(namn)">
+                <div class="form-group">
+                    <span class="input-group-text">Museum name</span>
+                    <select class="form-control" id="namn" ng-model="namn">
+                        <option value="">Select museum by name</option>
+                        <option>Kulla Gunnarstorps mölla</option>
+                        <option>Kulturmagasinet</option>
+                        <option>Grafiska museet</option>
+                        <option>Sofiero slott</option>
+                        <option>Turistbyrån</option>
+                        <option>Dag Hammarskjölds väg 2</option>
+                        <option>Fredriksdal museer och trädgårdar</option>
+                        <option>Jöns Jonsgården</option>
+                        <option>Beredskapsmuseet</option>
+                        <option>Folkrörelsearkivet</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+
+        <!-- SEARCH BY Adress -->
+        <div class="container">
+            <form class="form-inline" ng-submit="museum(adress)">
+                <div class="form-group">
+                    <span class="input-group-text">Address</span>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your address" name="adress"
+                        ng-model="adress">
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+    </div>
+</section>

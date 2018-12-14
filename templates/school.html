@@ -1,0 +1,90 @@
+<section class="container-fluid text-center panel panel-default formPanel">
+    <div class="row">
+        <!-- SEARCH BY Region -->
+        <div class="container">
+            <form class="form-inline" ng-submit="school(omrade)">
+                <div class="form-group">
+                    <span class="input-group-text">Region</span>
+                    <select class="form-control" id="namn" ng-model="omrade">
+                        <option value="">Select school by region</option>
+                        <option>Centrum</option>
+                        <option>Olympia</option>
+                        <option>Rosengård</option>
+                        <option>Mariastaden</option>
+                        <option>Ödåkra</option>
+                        <option>Fredriksdal</option>
+                        <option>Gustavslund</option>
+                        <option>Ramlösa</option>
+                        <option>Hittarp/Laröd</option>
+                        <option>Adolfsberg</option>
+                        <option>Högaborg</option>
+                        <option>Planterinen</option>
+                        <option>Söder</option>
+                        <option>Drottninghög</option>
+                        <option>Ringstorp</option>
+                        <option>Rydebäck</option>
+                        <option>Råå</option>
+                        <option>Bårslöv</option>
+                        <option>Vallåkra</option>
+                        <option>Ättekulla</option>
+                        <option>Allerum</option>
+                        <option>Dalhem</option>
+                        <option>Gantofta</option>
+                        <option>Mårarp </option>
+                        <option>Påarp</option>
+                        <option>Tågaborg N</option>
+                        <option>Tågaborg S</option>
+                        <option>Wilson Park</option>
+                        <option>Berga</option>
+                        <option>Elineberg</option>
+                        <option>Husensjö</option>
+                        <option>Norr</option>
+                        <option>Slottshöjden</option>
+                        <option>Högastan</option>
+                        <option>Kattarp</option>
+                        <option>Miatorp</option>
+                        <option>Närlunda</option>
+                        <option>Stattena</option>
+                        <option>Eneborg</option>
+                        <option>Eskilsminne</option>
+                        <option>Raus</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+
+        <!-- SEARCH BY type -->
+        <div class="container">
+            <form class="form-inline" ng-submit="school(skoltyp)">
+                <div class="form-group">
+                    <span class="input-group-text">School type</span>
+                    <select class="form-control" id="namn" ng-model="skoltyp">
+                        <option value="">Select school by skoltyp</option>
+                        <option>Förskola</option>
+                        <option>Grundskola</option>
+                        <option>Gymnasieskola</option>
+                        <option>Särskola</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+
+        <!-- SEARCH BY Address -->
+        <div class="container">
+            <form class="form-inline" ng-submit="school(adress)">
+                <div class="form-group">
+                    <span class="input-group-text">Address</span>
+                    <input type="text" class="form-control" id="email" placeholder="Enter your address" name="adress"
+                        ng-model="adress">
+                </div>
+                <button type="submit" class="btn btn btn-primary bg-color-3">Search</button>
+            </form>
+        </div>
+        <!-------------------------->
+
+    </div>
+</section>

@@ -1,0 +1,59 @@
+<section>
+    <div class="row table_container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="lightblue">
+                    <th scope="col">
+                        <h3>School name </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>type </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>main name </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Adress </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Wibbsite </h3>
+                    </th>
+                </tr>
+            </thead>
+            <!-------------------------->
+
+            <tbody ng-repeat="school in schools">
+                <tr class="bg-light">
+                    <td>
+                        <h6> {{school.fields.namn}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{school.fields.skoltyp}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{school.fields.huvudman}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{school.fields.gatuadress}}</h6>
+                    </td>
+                    <td>
+                        <a href="{{school.fields.url}}">{{school.fields.url}}</a>
+                    </td>
+                </tr>
+            </tbody>
+            <!-------------------------->
+
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card text-center lightblue">
+                <h3>Total Schools: {{schools.length}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-------------------------->
+
+</section>

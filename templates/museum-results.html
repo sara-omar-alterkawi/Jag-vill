@@ -1,0 +1,46 @@
+<section>
+    <div class="row table_container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="lightblue">
+                    <th scope="col">
+                        <h3>Museum name </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Adress </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Wibbsite </h3>
+                    </th>
+                </tr>
+            </thead>
+            <!-------------------------->
+
+            <tbody ng-repeat="museum in museums">
+                <tr class="bg-light">
+                    <td>
+                        <h6> {{museum.fields.namn}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{museum.fields.adress}}</h6>
+                    </td>
+                    <td>
+                        <a href="{{museum.fields.url}}">{{museum.fields.url}}</a>
+                    </td>
+                </tr>
+            </tbody>
+            <!-------------------------->
+        </table>
+    </div>
+    <!-------------------------->
+
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card text-center lightblue">
+                <h3>Total museums: {{museums.length}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-------------------------->
+</section>

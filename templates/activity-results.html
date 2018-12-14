@@ -1,0 +1,50 @@
+<section>
+    <div class="row table_container">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="lightblue">
+                    <th scope="col">
+                        <h3>Activity name </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Category </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Adress </h3>
+                    </th>
+                    <th scope="col">
+                        <h3>Wibbsite </h3>
+                    </th>
+                </tr>
+            </thead>
+            <!-------------------------->
+            <tbody ng-repeat="aktivity in aktivities">
+                <tr class="bg-light">
+                    <td>
+                        <h6> {{aktivity.fields.objektnamn}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{aktivity.fields.kategori}}</h6>
+                    </td>
+                    <td>
+                        <h6>{{aktivity.fields.adress}}</h6>
+                    </td>
+                    <td>
+                        <a href="{{aktivity.fields.url}}">{{aktivity.fields.url}}</a>
+                    </td>
+                </tr>
+            </tbody>
+            <!-------------------------->
+        </table>
+    </div>
+    <!-------------------------->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <div class="card text-center lightblue">
+                <h3>Total Aktivities: {{aktivities.length}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-------------------------->
+</section>
