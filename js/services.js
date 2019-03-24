@@ -54,7 +54,7 @@ app.factory('getSchools', ['$http', function ($http) {
         inputschool: function (adress) {
             var adress = adress;
             //https://helsingborg.opendatasoft.com/api/records/1.0/search/?dataset=skolor_ny&q=Svanhalsgatan+27&rows=50&facet=gatuadress
-           var url = "https://helsingborg.opendatasoft.com/api/records/1.0/search/?dataset=skolor_ny&q=" + adress + "&rows=200&facet=gatuadress";
+            var url = "https://helsingborg.opendatasoft.com/api/records/1.0/search/?dataset=skolor_ny&q=" + adress + "&rows=200&facet=gatuadress";
             return $http.get(url)
                 .then(function (data) {
                     return data.data;
